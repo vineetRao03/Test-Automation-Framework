@@ -14,7 +14,7 @@ public class JSONUtility {
 	public static Environment readJSON (Env env) {
 
 		Gson gson = new Gson(); // to read JSON in java- No in-built funct. so we use 
-		File jsonFile = new File(System.getProperty("user.dir") + "\\config\\config.json");
+		File jsonFile = new File(System.getProperty("user.dir") + "//config//config.json");
 		FileReader fileReader = null;
 		try {
 			fileReader = new FileReader(jsonFile);

@@ -22,13 +22,14 @@ public class TestBase {
 
 	@Parameters({ "browser", "isLambdaTest", "isHeadless" })
 	@BeforeMethod(description = "Load the Homepage of the website")
+	
 	public void setUp(
 			@Optional("chrome") String browser, 
 			@Optional("false") boolean isLambdaTest,
-			@Optional("true") boolean isHeadless, ITestResult result) {
+			@Optional("false") boolean isHeadless, ITestResult result) {
 
 		this.isLambdaTest = isLambdaTest;
-		System.out.println("Received browser parameter: " + browser);
+//		System.out.println("Received browser parameter: " + browser);
 
 		WebDriver lambdaDriver;
 		if (isLambdaTest) {
@@ -48,13 +49,13 @@ public class TestBase {
 		return homePage;
 	}
 
-	@AfterMethod(description = "Tear down the browser")
-	public void teadDown() {
-		if (isLambdaTest) {
-			LambdaTestUtility.quitSession(); // quit the browser session on lambda test
-		} else {
-			homePage.quit();
-		}
-	}
+//	@AfterMethod(description = "Tear down the browser")
+//	public void teadDown() {
+//		if (isLambdaTest) {
+//			LambdaTestUtility.quitSession(); // quit the browser session on lambda test
+//		} else {
+//			homePage.quit();
+//		}
+//	}
 
 }

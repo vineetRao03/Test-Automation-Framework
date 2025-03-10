@@ -5,6 +5,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static com.constants.Size.*;
+
+import com.constants.Color;
 import com.ui.pages.SearchResultPage;
 
 public class ProductCheckoutTest extends TestBase {
@@ -21,7 +23,8 @@ public class ProductCheckoutTest extends TestBase {
 	@Test(description = "Verify if the logged in User is able to buy a dress", groups = { "e2e", "smoke", "sanity" })
 	public void checkoutTest() {
 		String result =searchResultPage.clickOnTheProductAtIndex(0)
-		.changeSize(L).addProductToCart()
+		.changeSize(L).changeColor(Color.BLUE).addProductToCart()
+		
 		.proceedToCheckout()
 		.goToConfirmAddressPage()
 		.goToShipmentPage().goToPaymentMode().makePaymentByWire();

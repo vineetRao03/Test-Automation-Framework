@@ -28,8 +28,9 @@ Possess experience as a Manual Tester within the Temenos T24 core banking domain
 Before running this framework, ensure the following software is installed on your system:
 
 **Java 11** - Make sure Java is installed and the JAVA_HOME environment variable is set.   
-**Maven** - Ensure Maven is installed and added to the system path.
+**Maven** - Ensure Maven is installed and added to the system path.       
 **Download Link**: https://maven.apache.org/download.cgi
+
 ## Features
 - **Data-Driven Testing**: Using OpenCSV, Apache POI, and Gson for reading test data from CSV and Excel files and JSON.
 - **Cross-Browser Testing**: Supports running tests on different browsers.
